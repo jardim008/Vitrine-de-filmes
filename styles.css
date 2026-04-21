@@ -1,0 +1,161 @@
+:root{
+  --bg:#0b0220;
+  --card:#12041a;
+  --accent:#7b1fa2; /* roxo principal */
+  --accent-2:#9c27b0;
+  --gold:#d4af37;
+  --text:#f3eefe;
+  --muted:#cdbfe0;
+  --radius:12px;
+  --max-width:1100px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:linear-gradient(180deg,#050014 0%, #0b0220 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px;
+  background:linear-gradient(90deg, rgba(123,31,162,0.12), rgba(0,0,0,0.2));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+
+.site-header h1{
+  margin:0;
+  font-size:1.2rem;
+  color:var(--accent-2);
+  letter-spacing:0.6px;
+}
+
+.site-header nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:14px;
+  padding:6px 10px;
+  border-radius:6px;
+}
+
+.site-header nav a.active,
+.site-header nav a:hover{
+  background:rgba(156,39,176,0.12);
+  color:var(--text);
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:36px auto;
+  padding:0 20px;
+}
+
+/* Gallery layout: responsive grid */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:22px;
+  align-items:start;
+}
+
+/* Card */
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:12px;
+  text-align:center;
+  box-shadow:0 8px 26px rgba(0,0,0,0.6);
+  transition:transform .22s ease, box-shadow .22s ease;
+  border:1px solid rgba(156,39,176,0.08);
+}
+
+.card img{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  display:block;
+  margin-bottom:12px;
+  border:4px solid rgba(123,31,162,0.08);
+}
+
+.card h2{
+  margin:0;
+  font-size:1.05rem;
+  color:var(--text);
+}
+
+.card .desc{
+  margin-top:8px;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+/* Contact form */
+.contact-card{
+  max-width:700px;
+  margin:0 auto;
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 10px 36px rgba(0,0,0,0.6);
+  border:1px solid rgba(156,39,176,0.06);
+}
+
+label{
+  display:block;
+  margin-top:12px;
+  color:var(--muted);
+  font-size:0.9rem;
+}
+
+input, textarea{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:rgba(255,255,255,0.02);
+  color:var(--text);
+  outline:none;
+}
+
+input:focus, textarea:focus{
+  box-shadow:0 0 0 4px rgba(123,31,162,0.08);
+  border-color:var(--accent);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:14px;
+  background:var(--accent);
+  color:white;
+  padding:10px 16px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn:hover{opacity:0.95; transform:translateY(-2px);}
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  padding:18px 10px;
+  color:var(--muted);
+  font-size:0.9rem;
+  border-top:1px solid rgba(255,255,255,0.02);
+  margin-top:40px;
+}
+
+/* Hover effect for cards */
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 22px 48px rgba(0,0,0,0.7);
+}

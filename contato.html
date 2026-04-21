@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contato - Minha Vitrine de Filmes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Contato</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contato.html" class="active">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="contact-card">
+      <form id="contactForm">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Enviar Mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Obrigado por entrar em contato!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
